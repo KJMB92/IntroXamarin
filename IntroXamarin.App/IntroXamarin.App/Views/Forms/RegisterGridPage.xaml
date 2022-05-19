@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.RegisterGridPage">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center">
+            <StackLayout Margin="20,32"
+                         Spacing="0">
+
+                <Button Text="Register"
+                        BackgroundColor="WhiteSmoke"
+                        TextColor="Black"
+                        CornerRadius="20"
+                        x:Name="RegisterUp"/>
+                <Label/>
+                <Grid HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      BackgroundColor="Azure">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Text="First Name" FontSize="Title" TextColor="DarkBlue" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Entry Grid.Row="0" Grid.Column="1" Placeholder="Enter the First Name" PlaceholderColor="DarkGray" x:Name="FirstName" TextColor="DarkBlue"/>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Last Name" FontSize="Title" TextColor="DarkBlue" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Entry Grid.Row="1" Grid.Column="1" Placeholder="Enter the Last Name" PlaceholderColor="DarkGray" x:Name="LastName" TextColor="DarkBlue"/>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Telephone" FontSize="Title" TextColor="DarkBlue" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Entry Grid.Row="2" Grid.Column="1" Placeholder="Enter the Telephone" PlaceholderColor="DarkGray" Keyboard="Telephone" x:Name="Telephone" TextColor="DarkBlue"/>
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="Email" FontSize="Title" TextColor="DarkBlue" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Entry Grid.Row="3" Grid.Column="1" Placeholder="Enter the Email" PlaceholderColor="DarkGray" Keyboard="Email" x:Name="Email" TextColor="DarkBlue"/>
+
+                    <Label Grid.Row="4" Grid.Column="0" Text="Enrollment Date" FontSize="Title" TextColor="DarkBlue" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <DatePicker Grid.Row="4" Grid.Column="1" x:Name="EnrollmentDate" Date="2022-05-12" TextColor="DarkGray"/>
+                </Grid>
+                <Label/>
+                <Button Text="Register"
+                        BackgroundColor="WhiteSmoke"
+                        TextColor="Black"
+                        CornerRadius="20"
+                        x:Name="Register"
+                        Clicked="Register_Clicked"/>
+
+                <ActivityIndicator x:Name="Indicator" IsRunning="True"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

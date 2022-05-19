@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.Calculator"
+             BackgroundColor="LightSlateGray">
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!--#region Para Formulas -->
+            <Grid HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="EndAndExpand"
+                      BackgroundColor="LightGray">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Entry 1 para los calculos" Grid.Row="0" 
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Para resultados -->
+            <Grid HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="StartAndExpand"
+                      BackgroundColor="LightGray">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Entry 1 para las respuestas" Grid.Row="0" 
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Para las teclas -->
+            <Grid HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="CenterAndExpand"
+                      BackgroundColor="DarkGray">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+
+                <!--#region Fila 1 -->
+                <Label Text="C" 
+                       Grid.Row="0" Grid.Column="0"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"
+                       FontAttributes="Bold"/>
+
+                <Label Text="Borrar" 
+                       Grid.Row="0" Grid.Column="1"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Medium"/>
+
+                <Label Text="%" 
+                       Grid.Row="0" Grid.Column="2"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"/>
+
+                <Label Text="÷" 
+                       Grid.Row="0" Grid.Column="3"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"/>
+                <!--#endregion-->
+
+                <!--#region Fila 2 -->
+                <Label Text="7" 
+                       Grid.Row="1" Grid.Column="0"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="8" 
+                       Grid.Row="1" Grid.Column="1"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="9" 
+                       Grid.Row="1" Grid.Column="2"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="x" 
+                       Grid.Row="1" Grid.Column="3"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"/>
+                <!--#endregion-->
+
+                <!--#region Fila 3 -->
+                <Label Text="4" 
+                       Grid.Row="2" Grid.Column="0"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="5" 
+                       Grid.Row="2" Grid.Column="1"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="6" 
+                       Grid.Row="2" Grid.Column="2"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="-" 
+                       Grid.Row="2" Grid.Column="3"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"/>
+                <!--#endregion-->
+
+                <!--#region Fila 4 -->
+                <Label Text="√" 
+                       Grid.Row="3" Grid.Column="0"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"/>
+
+                <Label Text="0" 
+                       Grid.Row="3" Grid.Column="1"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <Label Text="." 
+                       Grid.Row="3" Grid.Column="2"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"/>
+
+                <Label Text="=" 
+                       Grid.Row="3" Grid.Column="3"
+                       BackgroundColor="WhiteSmoke"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Title"
+                       FontAttributes="Bold"/>
+                <!--#endregion-->
+            </Grid>
+            <!--#endregion-->
+             
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
