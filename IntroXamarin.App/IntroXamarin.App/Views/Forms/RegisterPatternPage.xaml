@@ -24,30 +24,35 @@
                     <Label />
 
                     <Label Text="First Name"/>
-                    <Entry Placeholder="Enter the First Name" x:Name="FirstName"/>
+                    <Entry Placeholder="Enter the First Name" x:Name="FirstName"
+                           Text="{Binding FirstName}"/>
 
                     <Label Text="Last Name"/>
-                    <Entry Placeholder="Enter the Last Name" x:Name="LastName"/>
+                    <Entry Placeholder="Enter the Last Name" x:Name="LastName"
+                           Text="{Binding LastName}"/>
 
                     <Label Text="Telephone"/>
                     <Entry Placeholder="Enter the Telephone" 
-                       Keyboard="Telephone"
-                       x:Name="Telephone"/>
+                           Keyboard="Telephone" 
+                           x:Name="Telephone"
+                           Text="{Binding Telephone}"/>
 
                     <Label Text="Email"/>
                     <Entry Placeholder="Enter the Email" 
-                       Keyboard="Email"
-                       x:Name="Email"/>
+                           Keyboard="Email"
+                           x:Name="Email"
+                           Text="{Binding Email}"/>
 
                     <Label Text="Enrollment Date"/>
-                    <DatePicker x:Name="EnrollmentDate" Date="2022-05-12"/>
+                    <DatePicker x:Name="EnrollmentDate" 
+                           Date="{Binding EnrollmentDate}"/>
 
                     <Button Text="Register"
-                        BackgroundColor="WhiteSmoke"
-                        TextColor="Black"
-                        CornerRadius="20"
-                        x:Name="Register"
-                        Clicked="Register_Clicked"/>
+                           BackgroundColor="WhiteSmoke"
+                           TextColor="Black"
+                           CornerRadius="20"
+                           x:Name="Register"
+                           Command="{Binding RegisterCommand}"/>
                 </StackLayout>
         </ScrollView>
         

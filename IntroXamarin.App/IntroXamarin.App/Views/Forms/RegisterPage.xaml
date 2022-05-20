@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="IntroXamarin.App.Views.Forms.RegisterPage">
+             x:Class="IntroXamarin.App.Views.Forms.RegisterPage"
+             xmlns:viewModel="clr-namespace:IntroXamarin.App.ViewModels.Forms">
+
+    <ContentPage.BindingContext>
+        <viewModel:RegisterPatternViewModel/>
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
         <ScrollView HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center">
@@ -18,30 +24,34 @@
                 <Label />
                 
                 <Label Text="First Name"/>
-                <Entry Placeholder="Enter the First Name" x:Name="FirstName"/>
+                <Entry Placeholder="Enter the Last Name" x:Name="FirstName"
+                       Text="{Binding FirstName}"/>
 
                 <Label Text="Last Name"/>
-                <Entry Placeholder="Enter the Last Name" x:Name="LastName"/>
+                <Entry Placeholder="Enter the Last Name" x:Name="LastName"
+                       Text="{Binding LastName}"/>
 
                 <Label Text="Telephone"/>
                 <Entry Placeholder="Enter the Telephone" 
                        Keyboard="Telephone"
-                       x:Name="Telephone"/>
+                       x:Name="Telephone"
+                       Text="{Binding Telephone}"/>
 
                 <Label Text="Email"/>
                 <Entry Placeholder="Enter the Email" 
                        Keyboard="Email"
-                       x:Name="Email"/>
+                       x:Name="Email"
+                       Text="{Binding Email}"/>
 
                 <Label Text="Enrollment Date"/>
-                <DatePicker x:Name="EnrollmentDate" Date="2022-05-12"/>
+                <DatePicker x:Name="EnrollmentDate" Date="{Binding EnrollmentDate}"/>
 
                 <Button Text="Register"
                         BackgroundColor="WhiteSmoke"
                         TextColor="Black"
                         CornerRadius="20"
                         x:Name="Register"
-                        Clicked="Register_Clicked"/>
+                        Command="{Binding RegisterCommand}"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

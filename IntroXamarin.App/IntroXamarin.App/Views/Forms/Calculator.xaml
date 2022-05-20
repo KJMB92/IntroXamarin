@@ -11,7 +11,7 @@
             <!--#region Para Formulas -->
             <Grid HorizontalOptions="CenterAndExpand"
                       VerticalOptions="EndAndExpand"
-                      BackgroundColor="LightGray">
+                      BackgroundColor="Chocolate">
                 <Grid.RowDefinitions >
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
@@ -20,7 +20,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Entry 1 para los calculos" Grid.Row="0" 
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"/>
             </Grid>
@@ -29,7 +29,7 @@
             <!--#region Para resultados -->
             <Grid HorizontalOptions="CenterAndExpand"
                       VerticalOptions="StartAndExpand"
-                      BackgroundColor="LightGray">
+                      BackgroundColor="Chocolate">
                 <Grid.RowDefinitions >
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
@@ -38,7 +38,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Entry 1 para las respuestas" Grid.Row="0" 
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"/>
             </Grid>
@@ -64,7 +64,7 @@
                 <!--#region Fila 1 -->
                 <Label Text="C" 
                        Grid.Row="0" Grid.Column="0"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"
@@ -72,21 +72,21 @@
 
                 <Label Text="Borrar" 
                        Grid.Row="0" Grid.Column="1"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Medium"/>
 
                 <Label Text="%" 
                        Grid.Row="0" Grid.Column="2"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"/>
 
                 <Label Text="÷" 
                        Grid.Row="0" Grid.Column="3"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"/>
@@ -95,28 +95,28 @@
                 <!--#region Fila 2 -->
                 <Label Text="7" 
                        Grid.Row="1" Grid.Column="0"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
                 <Label Text="8" 
                        Grid.Row="1" Grid.Column="1"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
                 <Label Text="9" 
                        Grid.Row="1" Grid.Column="2"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
                 <Label Text="x" 
                        Grid.Row="1" Grid.Column="3"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"/>
@@ -125,58 +125,51 @@
                 <!--#region Fila 3 -->
                 <Label Text="4" 
                        Grid.Row="2" Grid.Column="0"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
                 <Label Text="5" 
                        Grid.Row="2" Grid.Column="1"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
                 <Label Text="6" 
                        Grid.Row="2" Grid.Column="2"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
                 <Label Text="-" 
                        Grid.Row="2" Grid.Column="3"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"/>
                 <!--#endregion-->
 
                 <!--#region Fila 4 -->
-                <Label Text="√" 
+                <Label Text="." 
                        Grid.Row="3" Grid.Column="0"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"/>
 
                 <Label Text="0" 
                        Grid.Row="3" Grid.Column="1"
-                       BackgroundColor="WhiteSmoke"
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Large"/>
 
-                <Label Text="." 
-                       Grid.Row="3" Grid.Column="2"
-                       BackgroundColor="WhiteSmoke"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"/>
-
                 <Label Text="=" 
-                       Grid.Row="3" Grid.Column="3"
-                       BackgroundColor="WhiteSmoke"
+                       Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="2" 
+                       BackgroundColor="Chocolate"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center"
                        FontSize="Title"
