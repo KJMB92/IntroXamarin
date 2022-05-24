@@ -2,179 +2,397 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IntroXamarin.App.Views.Forms.Calculator"
-             BackgroundColor="LightSlateGray">
+             BackgroundColor="PapayaWhip">
 
 
     <ContentPage.Content>
         <StackLayout>
 
             <!--#region Para Formulas -->
-            <Grid HorizontalOptions="CenterAndExpand"
-                      VerticalOptions="EndAndExpand"
-                      BackgroundColor="Chocolate">
-                <Grid.RowDefinitions >
-                    <RowDefinition Height="50" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="320"/>
-                </Grid.ColumnDefinitions>
+            
+            <Frame BorderColor="Orange" 
+                   CornerRadius="10" 
+                   HasShadow="True"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   HeightRequest="100"
+                   WidthRequest="300">
 
-                <Label Text="Entry 1 para los calculos" Grid.Row="0" 
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"/>
-            </Grid>
+                <Label Text="0" 
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="End"
+                       TextColor="Black"
+                       x:Name="labelNumeroFormula1"/>
+            </Frame>
+            
             <!--#endregion-->
 
             <!--#region Para resultados -->
-            <Grid HorizontalOptions="CenterAndExpand"
-                      VerticalOptions="StartAndExpand"
-                      BackgroundColor="Chocolate">
-                <Grid.RowDefinitions >
-                    <RowDefinition Height="50" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="320"/>
-                </Grid.ColumnDefinitions>
+            <Frame BorderColor="Orange" 
+                   CornerRadius="10" 
+                   HasShadow="True"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   HeightRequest="100"
+                   WidthRequest="300">
 
-                <Label Text="Entry 1 para las respuestas" Grid.Row="0" 
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"/>
-            </Grid>
+                <Label Text="Entry para resultados" 
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="End"
+                       TextColor="Black"
+                       x:Name="LabelParaResultados"/>
+            </Frame>
             <!--#endregion-->
 
             <!--#region Para las teclas -->
             <Grid HorizontalOptions="CenterAndExpand"
-                      VerticalOptions="CenterAndExpand"
-                      BackgroundColor="DarkGray">
-                <Grid.RowDefinitions >
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="80" />
+                      VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
+                    <RowDefinition Height="90" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="90"/>
                 </Grid.ColumnDefinitions>
 
                 <!--#region Fila 1 -->
-                <Label Text="C" 
-                       Grid.Row="0" Grid.Column="0"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"
-                       FontAttributes="Bold"/>
+                
+                <Button Text="C"
+                        Grid.Row="0" Grid.Column="0"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaClear"
+                        Clicked="limpiar"/>
 
-                <Label Text="Borrar" 
-                       Grid.Row="0" Grid.Column="1"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Medium"/>
 
-                <Label Text="%" 
-                       Grid.Row="0" Grid.Column="2"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"/>
+                <Button Text="B"
+                        Grid.Row="0" Grid.Column="1"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaBorrar"/>
 
-                <Label Text="÷" 
-                       Grid.Row="0" Grid.Column="3"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"/>
+
+                <Button Text="(²)"
+                        Grid.Row="0" Grid.Column="2"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaPorcentaje"
+                        Clicked="porcentaje"/>
+
+                
+                <Button Text="÷"
+                        Grid.Row="0" Grid.Column="3"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaDivisor"
+                        Clicked="operacion"/>
                 <!--#endregion-->
 
                 <!--#region Fila 2 -->
-                <Label Text="7" 
-                       Grid.Row="1" Grid.Column="0"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
+                <Button Text="7"
+                        Grid.Row="1" Grid.Column="0"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum7"
+                        Clicked="tecladoNumero"/>
 
-                <Label Text="8" 
-                       Grid.Row="1" Grid.Column="1"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
 
-                <Label Text="9" 
-                       Grid.Row="1" Grid.Column="2"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
+                <Button Text="8"
+                        Grid.Row="1" Grid.Column="1"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum8"
+                        Clicked="tecladoNumero"/>
 
-                <Label Text="x" 
-                       Grid.Row="1" Grid.Column="3"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"/>
+
+                <Button Text="9"
+                        Grid.Row="1" Grid.Column="2"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum9"
+                        Clicked="tecladoNumero"/>
+
+
+                <Button Text="x"
+                        Grid.Row="1" Grid.Column="3"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaMultiplicacion"
+                        Clicked="operacion"/>
                 <!--#endregion-->
 
                 <!--#region Fila 3 -->
-                <Label Text="4" 
-                       Grid.Row="2" Grid.Column="0"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
 
-                <Label Text="5" 
-                       Grid.Row="2" Grid.Column="1"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
+                <Button Text="4"
+                        Grid.Row="2" Grid.Column="0"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum4"
+                        Clicked="tecladoNumero"/>
 
-                <Label Text="6" 
-                       Grid.Row="2" Grid.Column="2"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
 
-                <Label Text="-" 
-                       Grid.Row="2" Grid.Column="3"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"/>
+                <Button Text="5"
+                        Grid.Row="2" Grid.Column="1"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum5"
+                        Clicked="tecladoNumero"/>
+
+
+                <Button Text="6"
+                        Grid.Row="2" Grid.Column="2"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum6"
+                        Clicked="tecladoNumero"/>
+
+
+                <Button Text="-"
+                        Grid.Row="2" Grid.Column="3"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaResta"
+                        Clicked="operacion"/>
+                
                 <!--#endregion-->
 
                 <!--#region Fila 4 -->
-                <Label Text="." 
-                       Grid.Row="3" Grid.Column="0"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"/>
 
-                <Label Text="0" 
-                       Grid.Row="3" Grid.Column="1"
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Large"/>
+                <Button Text="1"
+                        Grid.Row="3" Grid.Column="0"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum1"
+                        Clicked="tecladoNumero"/>
 
-                <Label Text="=" 
-                       Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="2" 
-                       BackgroundColor="Chocolate"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       FontSize="Title"
-                       FontAttributes="Bold"/>
+
+                <Button Text="2"
+                        Grid.Row="3" Grid.Column="1"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum2"
+                        Clicked="tecladoNumero"/>
+
+
+                <Button Text="3"
+                        Grid.Row="3" Grid.Column="2"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum3"
+                        Clicked="tecladoNumero"/>
+
+
+                <Button Text="+"
+                        Grid.Row="3" Grid.Column="3"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaResta2"
+                        Clicked="operacion"/>
+
                 <!--#endregion-->
+
+                <!--#region Fila 5 -->
+
+                <Button Text="."
+                        Grid.Row="4" Grid.Column="0"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaPunto"/>
+
+
+                <Button Text="0"
+                        Grid.Row="4" Grid.Column="1"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaNum0"
+                        Clicked="tecladoNumero"/>
+
+                <Button Text="="
+                        Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"  
+                        HeightRequest="100"
+                        WidthRequest="200"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        BackgroundColor="WhiteSmoke"
+                        BorderColor="AntiqueWhite"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        x:Name="TeclaIgual"
+                        Clicked="igual"/>
+
+                <!--#endregion-->
+                
             </Grid>
             <!--#endregion-->
              
