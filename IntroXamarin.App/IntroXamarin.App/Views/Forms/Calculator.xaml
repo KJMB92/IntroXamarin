@@ -18,7 +18,7 @@
                    HeightRequest="100"
                    WidthRequest="300">
 
-                <Label Text="0" 
+                <Label Text="" 
                        HorizontalTextAlignment="End"
                        VerticalTextAlignment="End"
                        TextColor="Black"
@@ -36,7 +36,7 @@
                    HeightRequest="100"
                    WidthRequest="300">
 
-                <Label Text="Entry para resultados" 
+                <Label Text="" 
                        HorizontalTextAlignment="End"
                        VerticalTextAlignment="End"
                        TextColor="Black"

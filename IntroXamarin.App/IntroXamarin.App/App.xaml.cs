@@ -11,7 +11,7 @@ namespace IntroXamarin.App
         {
             InitializeComponent();
 
-            MainPage = new Calculator();
+            MainPage = new CalculoIMC();
         }
 
         protected override void OnStart()

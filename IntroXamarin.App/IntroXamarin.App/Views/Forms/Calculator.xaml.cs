@@ -19,9 +19,23 @@ namespace IntroXamarin.App.Views.Forms
 
         public double cifra = 0;
         public double numero1 = 0;
-        public double numero2 = 0;
+        public double numero2;
         public string operando;
         public int estado = 1;
+
+        #region Captura la operacion tecleada
+        public void operacion(object sender, EventArgs e)
+        {
+            estado = -2;
+            Button button = (Button)sender;
+            string presionado = button.Text;
+            if (operando != presionado)
+            {
+                this.labelNumeroFormula1.Text += presionado;
+            }
+            operando = presionado;
+        }
+        #endregion
 
         #region captura lo tecleado en numeros
 
@@ -30,17 +44,18 @@ namespace IntroXamarin.App.Views.Forms
             Button button = (Button)sender;
             string presionado = button.Text;
 
-            if(this.labelNumeroFormula1.Text == "0" || estado < 0)
+            
+
+            if (this.labelNumeroFormula1.Text == "0" || estado < 0)
             {
                 this.labelNumeroFormula1.Text = "";
-
                 if (estado < 0)
                 {
                     estado *= -1;
                 }
             }
-
             this.labelNumeroFormula1.Text += presionado;
+
 
             double numero;
             if (double.TryParse(this.labelNumeroFormula1.Text, out numero))
@@ -59,16 +74,6 @@ namespace IntroXamarin.App.Views.Forms
 
         #endregion
 
-        #region Captura la operacion tecleada
-        public void operacion(object sender, EventArgs e)
-        {
-            estado = -2;
-            Button button = (Button)sender;
-            string presionado = button.Text;
-            operando = presionado;
-        }
-        #endregion
-
         #region captura la tecla limpiar
 
         void limpiar(object sender, EventArgs e)
@@ -76,7 +81,8 @@ namespace IntroXamarin.App.Views.Forms
             numero1 = 0;
             numero2 = 0;
             estado = 1;
-            this.labelNumeroFormula1.Text = "0";
+            this.labelNumeroFormula1.Text = "";
+            this.LabelParaResultados.Text = "";
         }
 
         #endregion
@@ -103,9 +109,9 @@ namespace IntroXamarin.App.Views.Forms
             {
                 var resultado = calculos(numero1, numero2, operando);
 
-                this.labelNumeroFormula1.Text = resultado.ToString();
+                this.LabelParaResultados.Text = resultado.ToString();
                 numero1 = resultado;
-                estado = -1;
+                estado = 1;
             }
         }
         #endregion

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.CalculoIMC"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+
+                <!--#region definicion de grid -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!--#endregion-->
+
+
+
+                <Button Text="Calculo IMC"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        HeightRequest="400"
+                        WidthRequest="300"
+                        Margin="10"
+                        BackgroundColor="DarkBlue"
+                        TextColor="White"
+                        CornerRadius="20"
+                        FontSize="40"/>
+
+
+
+                <Label Grid.Row="1" Grid.Column="0"
+                    Text="Ingresa tu peso"
+                       TextColor="Black"
+                       VerticalOptions="EndAndExpand"/>
+                <Entry Grid.Row="2" Grid.Column="0"
+                       Placeholder="I'm ready for some text"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       BackgroundColor="WhiteSmoke"
+                       Keyboard="Telephone"
+                       x:Name="EntryPeso"/>
+
+
+
+                <Label  Grid.Row="3" Grid.Column="0"
+                        Text="Ingresa tu altura en centimetros"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"/>
+                <Entry Grid.Row="4" Grid.Column="0"
+                       Placeholder="I'm ready for some text"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       BackgroundColor="WhiteSmoke"
+                       Keyboard="Telephone"
+                       x:Name="EntryAltura"/>
+
+
+
+                <Label  Grid.Row="5" Grid.Column="0"
+                        Text="Tu IMC es"
+                        TextColor="Black"
+                        VerticalOptions="EndAndExpand"/>
+                <Label Text=""
+                        Grid.Row="6" Grid.Column="0"
+                       TextColor="Black"
+                       BackgroundColor="WhiteSmoke"
+                       x:Name="LabelParaVerIMC"/>
+
+                
+                
+                <Button Text="Calculo IMC"
+                        Grid.Row="7" Grid.Column="0"
+                        VerticalOptions="FillAndExpand"
+                        HeightRequest="100"
+                        WidthRequest="10"
+                        BackgroundColor="DarkBlue"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Margin="20"
+                        x:Name="Calcular"
+                        Clicked="CalcularBTN"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
